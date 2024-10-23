@@ -1,0 +1,19 @@
+nav{
+    height: 50px;
+    background-color: var(--navbar-color);
+}
+
+.nav-link{
+    text-transform: uppercase;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps navbar on top of content */
+    background-color: var(--navbar-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    margin-top: 0; /* Reset margin when sticky */
+  }

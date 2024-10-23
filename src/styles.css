@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
+:root{
+    --primary-color:#4ed359;
+    --secondery-color:#32a4a8;
+    --body-text-color:#080808;
+    --navbar-color:#648a1e;
+}
+
+.noto-serif-bengali-default {
+    font-family: "Noto Serif Bengali", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+body{
+    font-family: "Noto Serif Bengali", serif;
+    font-size: 15px;
+    color: var(--body-text-color);
+
+}
+
+
+.site-logo{
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--secondery-color);
+    color: var(--prima);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav-link{
+    color: var(--primary-color) 
+}
+.nav-link:hover{
+    color: var(--secondery-color)
+}
+
+.bg-theme{
+    background-color: var(--primary-color);
+}
+.shadow-effect-card{
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgba(94, 173, 103, 0.5);
+}
+
+.btn-sub{
+    height: 50px;
+    border: none;
+    font-size: 13px;
+    background-color: var(--primary-color);
+}
+
+input[type=text], input[type=email]{
+    height: 60px;
+    padding-left: 20px;
+    font-size: 13px;
+    width: 100%;
+}
