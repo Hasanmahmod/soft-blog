@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SutonnySushreeMJ';
+    src: url('/assets/fonts/SutonnySushreeMJ-Regular.ttf') format('truetype'),
+         url('/assets/fonts/SutonnySushreeMJ-Regular.woff') format('woff');
+  }
+  
+  .sutonny-Sushree-mj {
+    font-family: 'SutonnySushreeMJ';
+    font-weight: normal;
+    font-style: italic;    
+    font-display: swap;
+} 
+

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 
@@ -22,6 +25,7 @@ import { PostCardComponent } from './layouts/post-card/post-card.component';
 import { PageComponent } from './pages/page/page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +46,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AppRoutingModule,
     ReactiveFormsModule,
-    DashboardModule
+    DashboardModule,
+    AngularEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

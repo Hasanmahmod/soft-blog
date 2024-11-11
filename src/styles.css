@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+@import "ngx-toastr/toastr";
 
 :root{
     --primary-color:#4ed359;
@@ -43,9 +44,28 @@ body{
 .bg-theme{
     background-color: var(--primary-color);
 }
+
+.bg-secondary-theme{
+    background-color: var(--secondery-color);
+}
+.text-theme-primary{
+    color: var(--primary-color);
+}
+
+.shadow-effect{
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgba(37, 69, 173, 0.6);
+}
+
 .shadow-effect-card{
     border: none;
     box-shadow: 0px 0px 33px -10px rgba(94, 173, 103, 0.5);
+}
+.btn-theme{
+    height: 58px;
+    border: none;
+    font-size: 13px;
+    background-color: var(--primary-color);
 }
 
 .btn-sub{
@@ -59,5 +79,10 @@ input[type=text], input[type=email]{
     height: 60px;
     padding-left: 20px;
     font-size: 13px;
-    width: 100%;
+    width: 100% !important;
 }
+/* Showing toast message fixed position  */
+.toast-container {
+    position: fixed !important;    
+  }
+  
