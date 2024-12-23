@@ -12,4 +12,42 @@
             </div>
          </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-effect">
+                <div class="card-body">
+                    <table class="table row-border hover">
+                        <thead>
+                            <tr>
+                                <th> SL </th>
+                                <th> Category </th>
+                                <th> Post Img </th>
+                                <th> Title </th>
+                                <th> Created At </th>
+                                <th> Actions </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let post of Posts;let i=index">
+                                <td width="10">{{i+1}}</td>
+                                <td width="100">{{post.data.category?.category}}</td>
+                                <td width="200"> <img src="{{post.data.postImgPath}}" class="img img-fluid"> </td>
+                                <td width="300">{{post.data.title}}</td>
+                                <td width="100">{{post.data.createdAt.toMillis() | date }}</td>
+                                <td width="100"> 
+                                    <button class="btn btn-sm btn-warning" routerLink="/deshboard/newpost" [queryParams]="{id:post.id}">Edit</button> | 
+                                    <button class="btn btn-sm btn-warning" (click)="OnDelete(post.id,post.data.postImgPath)">Delete</button> 
+
+                                    <button *ngIf="!post.data.isfeatured" class="btn btn-sm btn-success" (click)="OnFeatured(post.id,true)">Make Featured</button> 
+                                    <button *ngIf="post.data.isfeatured"  class="btn btn-sm btn-warning" (click)="OnFeatured(post.id,false)">Remove Featured</button> 
+                               </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
